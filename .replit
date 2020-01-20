@@ -1,2 +1,2 @@
 language = "python3"
-run = "F7"
+run = "python prog.py"
