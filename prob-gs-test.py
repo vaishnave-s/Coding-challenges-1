@@ -1,3 +1,4 @@
+#GS INTERVIEW TEST DATE - 26.01.20
 # you will be given a value x and a range y to z.
 # the digits in x should not be the same as the digits in x multiplied by iterating over the range y to z. i.e x=2,y=10,z=12
 # n=10 => 2*10=20 invalid

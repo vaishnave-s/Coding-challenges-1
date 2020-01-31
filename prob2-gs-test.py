@@ -1,4 +1,4 @@
-
+#GS INTERVIEW TEST DATE - 26.01.20
 # You're given a message and a key. You have to either encode or decode it.
 # Encode=> 
 # message="open"
