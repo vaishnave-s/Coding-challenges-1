@@ -7,8 +7,11 @@ python-versions = "*"
 version = "0.0.5"
 
 [metadata]
-content-hash = "4393f531703293ee7e8fbd827bbe5fa8419082c516ccd85bf07c84f20596b6f4"
-python-versions = "^3.7"
+content-hash = "ba65c1c964c636810939dfc49d5a0b26eaf3f8c17b7a56f135093d676f0d8e6c"
+python-versions = "^3.8"
 
-[metadata.hashes]
-arrays = ["d1466210466a5bebbc64278b6db878b5691b6b1eff892ee2e544d88a14a34aec", "f67217ce631878a4aae2352a5d2d45045438c7f4fd15b37745a7793e0d8dbd02"]
+[metadata.files]
+arrays = [
+    {file = "Arrays-0.0.5-py3-none-any.whl", hash = "sha256:d1466210466a5bebbc64278b6db878b5691b6b1eff892ee2e544d88a14a34aec"},
+    {file = "Arrays-0.0.5.tar.gz", hash = "sha256:f67217ce631878a4aae2352a5d2d45045438c7f4fd15b37745a7793e0d8dbd02"},
+]
