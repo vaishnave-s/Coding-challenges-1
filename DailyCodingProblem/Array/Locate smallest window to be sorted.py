@@ -24,7 +24,7 @@ def windowOptimised(array):
 		max_seen = max(max_seen, array[i]) 
 		if array[i] < max_seen: 
 			right= i 
-	for i in range(n - 1, -1, -1): #reverse index
+	for i in range(n - 1, -1, -1): 
 		min_seen = min(min_seen, array[i]) 
 		if array[i] > min_seen: 
 			left= i 
