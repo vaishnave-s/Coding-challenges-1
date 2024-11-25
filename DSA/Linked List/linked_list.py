@@ -22,21 +22,21 @@ class LinkedList():
 		while last_node.next:
 			last_node=last_node.next
 		last_node.next=new_node
-	
+
 	def print_list(self):
 		current = self.head
 		while current:
 			print(current.data)
-			print("^")
+			if current.next is not None:
+				print("^")
 			current=current.next
-		print("None")
-	
+
 	#add new node first
 	def prepend(self,data):
 		new_node=Node(data)
 		new_node.next=self.head
 		self.head=new_node
-	
+
 	#insert after a spefific node
 	def insert_after_node(self,prev_node,data):
 		if not prev_node:
@@ -54,7 +54,7 @@ class LinkedList():
 			curr_node=curr_node.next
 			count+=1
 		return count
-	
+
 	#check if palindrome
 	def is_palindrome(self):
 		curr_node=self.head
@@ -87,31 +87,32 @@ class LinkedList():
 		if pivot_node and pivot_node.next!=None:
 			self.head=pivot_node.next
 			pivot_node.next=None
-	
-	#5-4-3-none + 3-2-1-none = 8-6-4-none with the first node being tens and last node being hundreds/ thousands...
-	def sum_ll(self,ll):
-		curr1=self.head
-		curr2=ll.head
-		s1=''
-		s2=''
-		while curr1:
-			s1+=str(curr1.data)
-			curr1=curr1.next
-		s1=s1[::-1]
-		i1=int(s1)
 
-		while curr2:
-			s2+=str(curr2.data)
-			curr2=curr2.next
-		s2=s2[::-1]
-		i2=int(s2)
-		sum_i=i1+i2
-		sum_s=str(sum_i)
-		sum_s=sum_s[::-1]
-		sum_ll=LinkedList()
-		for i in sum_s:
-			sum_ll.append(int(i))
-		return sum_ll
+	#5-4-3-none + 3-2-1-none = 8-6-4-none with the first node being tens and last node being hundreds/ thousands...
+	def sum_ll(self, ll):
+		curr1 = self.head
+		curr2 = ll.head
+
+		result_ll = LinkedList()
+		carry = 0
+
+		while curr1 or curr2 or carry > 0:
+				# Get the values of the current nodes (or 0 if the node doesn't exist)
+				val1 = curr1.data if curr1 else 0
+				val2 = curr2.data if curr2 else 0
+
+				# Sum of the current digits and carry
+				total = val1 + val2 + carry
+
+				# No separation of digits; store the total directly in the node
+				result_ll.append(total)
+
+				# Move to the next nodes
+				curr1 = curr1.next if curr1 else None
+				curr2 = curr2.next if curr2 else None
+
+		return result_ll
+
 
 
 llist = LinkedList()
