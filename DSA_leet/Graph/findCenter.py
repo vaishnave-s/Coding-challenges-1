@@ -1,13 +1,5 @@
 class Solution:
     def findCenter(self, edges: List[List[int]]) -> int:
-        hashmap =set()
-        for n1,n2 in edges:
-            if n1 not in hashmap:
-                hashmap.add(n1)
-            else:
-                return n1
-            if n2 not in hashmap:
-                hashmap.add(n2)
-            else:
-                return n2
+        first_edge,second_edge = edges[0],edges[1]
+        return first_edge[0] if first_edge[0] in second_edge else first_edge[1]
                 
